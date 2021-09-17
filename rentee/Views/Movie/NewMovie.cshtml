@@ -1,0 +1,56 @@
+﻿@model rentee.viewModels.MovieGenreViewModel
+@{
+    ViewBag.Title = @Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>@Model.Title</h2>
+<br />
+
+@using (Html.BeginForm("MovieFormAction", "Movie"))
+{
+
+    <div class="form-group">
+       
+        @Html.LabelFor(m => m.movie.movieName)
+        @Html.TextBoxFor(m => m.movie.movieName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.movie.movieName)
+
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.movie.releaseDate)
+        @Html.TextBoxFor(m => m.movie.releaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.movie.releaseDate)
+
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.movie.numberInStock)
+        @Html.TextBoxFor(m => m.movie.numberInStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.movie.numberInStock)
+
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(m => m.movie.categoryId)
+        @Html.DropDownListFor(m => m.movie.categoryId, new SelectList(Model.Generes, "Id", "name"), "Select Movie Genre"
+         , new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.movie.categoryId)
+    </div>
+
+    @Html.HiddenFor(m => m.movie.movieID)
+
+    <br />
+    <button type="submit" class="btn btn-primary">Save</button>
+
+
+    @section scripts
+        {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+    @Html.AntiForgeryToken();
+}

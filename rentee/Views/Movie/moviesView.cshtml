@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Movies";
+}
+@model IEnumerable<rentee.Models.Movie>
+
+<br />
+<h2> Current Aavailabe Movies</h2>
+<br />
+
+@Html.ActionLink("New Movie", "NewMovie", null, new { @class = "btn btn-primary" })
+<br />
+<br />
+
+
+<table id="movies" class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th>Movie Name</th>
+            <th> Genre </th>
+            <th> Manage </th>
+
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "movieName",
+                        render: function(data, type, movie) {
+                            return "<a href='/Movie/Edit/" + movie.movieID + "'>" + movie.movieName + "</a>";
+                        }
+                    },
+                    {
+                        data: "movieCategory.name"
+                    },
+                    {
+                        data: "movieID",
+                        render: function(data) {
+                            return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+           
+        
+
+
+        $("#movies").on("click", ".js-delete", function () {
+
+            var button = $(this);
+            bootbox.confirm("Are you sure you want to delete this movie?", function (result) {
+                if (result){
+                         $.ajax({
+                        url: "/api/movies/" + button.attr("data-movie-id"),
+                        method: "DELETE",
+                             success: function () {
+
+                             table.row(button.parents("tr")).remove().draw();
+                            
+                             }
+
+                         });
+                    }
+            });
+
+        });
+            });
+    </script>
+}
