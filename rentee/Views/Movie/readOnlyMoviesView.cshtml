@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Movies";
+}
+@model IEnumerable<rentee.Models.Movie>
+
+<br />
+<h2> Current Aavailabe Movies</h2>
+<br />
+
+
+<br />
+<br />
+
+
+<table id="movies" class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th>Movie Name</th>
+            <th> Genre </th>
+
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "movieName"
+                       
+                    },
+                    {
+                        data: "movieCategory.name"
+                    }
+                    
+                ]
+            });
+           
+        
+
+
+       
+
+        });
+           
+    </script>
+}

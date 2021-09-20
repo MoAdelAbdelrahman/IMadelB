@@ -11,8 +11,10 @@ using System.Data.Entity;
 
 namespace rentee.Controllers.API
 {
+    
     public class MoviesController : ApiController
     {
+       
         private MyDBContext _context;
 
         public MoviesController()

@@ -10,6 +10,7 @@ using rentee.viewModels;
 
 namespace rentee.Controllers
 {
+    
     public class MovieController : Controller
     {
         // GET: Movie
@@ -28,7 +29,10 @@ namespace rentee.Controllers
 
         public ActionResult moviesView()
         {
-            return View();
+            if (User.IsInRole(roleName.canManageMovies))
+                return View();
+
+            return View("readOnlyMoviesView");
         }
 
         public ActionResult movieDetails(int id)
@@ -41,6 +45,7 @@ namespace rentee.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult Edit(int id)
         {
             var wantedMovie = _context.Movies.SingleOrDefault(m => m.movieID == id);
@@ -59,6 +64,7 @@ namespace rentee.Controllers
 
         }
 
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult NewMovie()
         {
             var genres = _context.Categories.ToList();
@@ -72,6 +78,7 @@ namespace rentee.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult MovieFormAction(Movie movie)
         {
 

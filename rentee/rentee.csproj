@@ -462,6 +462,7 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\readOnlyIndex.cshtml" />
+    <Content Include="Views\Movie\readOnlyMoviesView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
