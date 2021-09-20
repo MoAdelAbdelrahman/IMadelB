@@ -29,6 +29,7 @@ namespace rentee.Controllers
             return View();
         }
 
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -42,6 +43,7 @@ namespace rentee.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult Save(Customer customer)
         {
 
@@ -57,6 +59,7 @@ namespace rentee.Controllers
 
             if (customer.customerID == 0)
                   _context.Customers.Add(customer);
+
             else
             {
                 var ExistCustomer = _context.Customers.Single(c => c.customerID == customer.customerID);

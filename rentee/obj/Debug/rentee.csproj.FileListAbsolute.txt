@@ -232,3 +232,4 @@ E:\rentee\rentee\obj\Debug\rentee.csproj.GenerateResource.cache
 E:\rentee\rentee\obj\Debug\rentee.csproj.CopyComplete
 E:\rentee\rentee\obj\Debug\rentee.dll
 E:\rentee\rentee\obj\Debug\rentee.pdb
+E:\rentee\rentee\obj\Debug\rentee.Migrations.SeedingUsers.resources

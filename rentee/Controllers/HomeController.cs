@@ -24,9 +24,14 @@ namespace rentee.Controllers
         {
             _contex.Dispose();
         }
+
+        
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(roleName.canManageMovies))
+                return View();
+
+            return View("readOnlyIndex");
         }
 
 
@@ -42,6 +47,8 @@ namespace rentee.Controllers
             return View(customer);
         }
 
+
+        [Authorize(Roles = roleName.canManageMovies)]
         public ActionResult Edit(int id)
         {
             var customer = _contex.Customers.SingleOrDefault(c => c.customerID == id);
