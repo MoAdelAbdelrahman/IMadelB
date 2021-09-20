@@ -25,13 +25,13 @@ namespace rentee.Controllers
             _contex.Dispose();
         }
 
-        
+        [AllowAnonymous]
         public ActionResult Index()
         {
-            if (User.IsInRole(roleName.canManageMovies))
-                return View();
+            if (!Request.IsAuthenticated)
+                return View("WelcomeScreen");
 
-            return View("readOnlyIndex");
+            return View("HomeScreen");
         }
 
 

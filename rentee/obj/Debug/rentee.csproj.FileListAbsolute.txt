@@ -234,3 +234,8 @@ E:\rentee\rentee\obj\Debug\rentee.dll
 E:\rentee\rentee\obj\Debug\rentee.pdb
 E:\rentee\rentee\obj\Debug\rentee.Migrations.SeedingUsers.resources
 E:\rentee\rentee\obj\Debug\rentee.Migrations.addedNameToUser.resources
+E:\rentee\rentee\bin\Glimpse.Ado.dll
+E:\rentee\rentee\bin\Glimpse.AspNet.dll
+E:\rentee\rentee\bin\Glimpse.Core.dll
+E:\rentee\rentee\bin\Glimpse.EF6.dll
+E:\rentee\rentee\bin\Glimpse.Mvc5.dll

@@ -34,6 +34,7 @@ namespace rentee.Controllers
 
             return View("readOnlyMoviesView");
         }
+        
 
         public ActionResult movieDetails(int id)
         {

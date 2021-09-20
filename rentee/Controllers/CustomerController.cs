@@ -26,7 +26,10 @@ namespace rentee.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(roleName.canManageMovies))
+                return View();
+
+            return View("readOnlyIndex");
         }
 
         [Authorize(Roles = roleName.canManageMovies)]
