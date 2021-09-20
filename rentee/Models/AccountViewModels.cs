@@ -64,9 +64,16 @@ namespace rentee.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [StringLength(255)]
+        [Display(Name ="Full Name")]
+        public string FullName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+
         public string Email { get; set; }
 
         [Required]

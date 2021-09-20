@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202109201532402_SeedingUsers.Designer.cs">
       <DependentUpon>202109201532402_SeedingUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109201617154_addedNameToUser.cs" />
+    <Compile Include="Migrations\202109201617154_addedNameToUser.Designer.cs">
+      <DependentUpon>202109201617154_addedNameToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -482,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109201532402_SeedingUsers.resx">
       <DependentUpon>202109201532402_SeedingUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109201617154_addedNameToUser.resx">
+      <DependentUpon>202109201617154_addedNameToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

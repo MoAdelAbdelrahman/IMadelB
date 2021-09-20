@@ -233,3 +233,4 @@ E:\rentee\rentee\obj\Debug\rentee.csproj.CopyComplete
 E:\rentee\rentee\obj\Debug\rentee.dll
 E:\rentee\rentee\obj\Debug\rentee.pdb
 E:\rentee\rentee\obj\Debug\rentee.Migrations.SeedingUsers.resources
+E:\rentee\rentee\obj\Debug\rentee.Migrations.addedNameToUser.resources
