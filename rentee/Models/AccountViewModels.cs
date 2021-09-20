@@ -8,6 +8,10 @@ namespace rentee.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        [Required]
+        [StringLength(255)]
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
     }
 
     public class ExternalLoginListViewModel
