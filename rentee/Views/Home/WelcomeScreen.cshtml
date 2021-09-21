@@ -1,7 +1,283 @@
-﻿
-@{
-    ViewBag.Title = "Welcome - rentee";
-}
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>rentee - Your #1 web system. </title>
 
-<h2>Welcome to rentee. Your neat web system for your retail store.</h2>
 
+    <link rel="stylesheet" href="~/bootstrap/bootstrap-mainTheme.css">
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/blue-scheme.css">
+
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+
+<body>
+
+    @Html.Partial("_Navbar")
+    <!-- /.site-header -->
+
+    <section id="homeIntro" class="parallax first-widget">
+        <div class="parallax-overlay">
+            <div class="container home-intro-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Choose the most maintainable retail system.</h2>
+                        <p>Fully restful on own services <br> </p>
+                        <a href="mailto:mahmd.3adel@gmail.com" class="large-button white-color">Contact Now<i class="icon-button fa fa-envelope-o"></i></a>
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.parallax-overlay -->
+    </section> <!-- /#homeIntro -->
+
+    <section class="cta clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="cta-title"><strong>Want to use rentee?</strong> </h4>
+                    @Html.ActionLink("Login", "Login", "Account", null, new { @class = "main-button accent-color" })
+
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.cta -->
+
+    <section class="light-content services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-umbrella fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Easy To Add any features</h3>
+                            <p>Adding any new feature a user want in less than 48 hours</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-mobile-phone fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Change to the design you want</h3>
+                            <p>Request any design, and it'll be fully integrated</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-pencil-square-o fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Pixel Perfect Design</h3>
+                            <p>Based on a 12 column grid system, with every pixel snapped.</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-code fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">API READY</h3>
+                            <p>The system is fully dependent on your own API.</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-eye-slash fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Retina Ready</h3>
+                            <p>Incredibly clean design provides you powerful way to grow your business.</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-lock fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Secured</h3>
+                            <p>Fully Security-Configured System.</p>
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /.services -->
+
+    <section class="dark-content portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header">
+                        <h2 class="section-title">rentee &reg;</h2>
+                        <p class="section-desc">Everything you need for your retail store.</p>
+                    </div> <!-- /.section-header -->
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <div id="portfolio-carousel" class="portfolio-carousel portfolio-holder">
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Dashboard Template</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Visual Admin</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="~/images/includes/project1.png" title="Visual Admin">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project1.jpg" alt="Visual Admin">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Mobile Ready</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Compass Template</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="~/images/includes/project2.PNG" title="Compass Template">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project2.jpg" alt="Compass Template">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Responsive Design</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Awesome Theme</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="~/images/includes/project3.PNG" title="Awesome Theme">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project3.jpg" alt="Awesome Theme">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Portfolio</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Volton Personal Site</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project4.PNG" title="Volton Personal Site">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project4.jpg" alt="Volton Personal Site">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Green</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Rectangle Design</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project5.jpg" title="Rectangle Design">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project5.jpg" alt="Rectangle Design">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Portfolio</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Masonry Gallery</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project6.jpg" title="Masonry Gallery">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project6.jpg" alt="Masonry Gallery">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Branding / Identity</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Gloss Template</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project7.jpg" title="Gloss Template">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project7.jpg" alt="Gloss Template">
+                </div>
+            </div> <!-- /.item -->
+        </div> <!-- /#owl-demo -->
+    </section> <!-- /.portfolio-holder -->
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/medigo-custom.min.js"></script>
+
+</body>
+</html>

@@ -1,7 +1,223 @@
 ﻿
 @{
-    ViewBag.Title = "HomeScreen";
+    ViewBag.Title = "Dashboard";
 }
 
-<h2>HomeScreen</h2>
+
+<br />
+<h2>Admin Dashboard</h2>
+
+<br />
+<br />
+
+<html>
+<head>
+
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/bootstrap/bootstrap-mainTheme.css">
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/blue-scheme.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+
+
+</head>
+<body>
+    <section class="light-content services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-black-tie fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Current Customers</h3>
+                            <p>@ViewData["customers"]  </p>
+                            @Html.ActionLink("Manage", "Index", "Customer", null, new { @class = "btn btn-primary" })
+
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-camera-retro fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Current Movies</h3>
+                            <p>@ViewData["movies"]  </p>
+                            @Html.ActionLink("Manage", "moviesView", "Movie", null, new { @class = "btn btn-primary" })
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-box-wrap">
+                        <div class="service-icon-wrap">
+                            <i class="fa fa-pencil-square-o fa-2x"></i>
+                        </div> <!-- /.service-icon-wrap -->
+                        <div class="service-cnt-wrap">
+                            <h3 class="service-title">Current Rentals</h3>
+                            <p>@ViewData["rentals"]  </p>
+                            @Html.ActionLink("Manage", "moviesView", "Movie", null, new { @class = "btn btn-primary" })
+                        </div> <!-- /.service-cnt-wrap -->
+                    </div> <!-- /.service-box-wrap -->
+                </div> <!-- /.col-md-4 -->
+
+            </div>
+
+    </section>
+    <section class="dark-content portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header">
+                        <h2 class="section-title">New Arrivals</h2>
+                        <p class="section-desc">Fresh From Hollywood.</p>
+                    </div> <!-- /.section-header -->
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+        <div id="portfolio-carousel" class="portfolio-carousel portfolio-holder">
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Dashboard Template</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Visual Admin</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project1.jpg" title="Visual Admin">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project1.jpg" alt="Visual Admin">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Mobile Ready</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Compass Template</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project2.jpg" title="Compass Template">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project2.jpg" alt="Compass Template">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Responsive Design</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Awesome Theme</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project3.jpg" title="Awesome Theme">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project3.jpg" alt="Awesome Theme">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Portfolio</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Volton Personal Site</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project4.jpg" title="Volton Personal Site">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project4.jpg" alt="Volton Personal Site">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Green</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Rectangle Design</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project5.jpg" title="Rectangle Design">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project5.jpg" alt="Rectangle Design">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Portfolio</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Masonry Gallery</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project6.jpg" title="Masonry Gallery">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project6.jpg" alt="Masonry Gallery">
+                </div>
+            </div> <!-- /.item -->
+            <div class="item">
+                <div class="thumb-post">
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <div class="portfolio-infos">
+                                <span class="meta-category">Branding / Identity</span>
+                                <h3 class="portfolio-title"><a href="project-slideshow.html">Gloss Template</a></h3>
+                            </div>
+                            <div class="portfolio-expand">
+                                <a class="fancybox" href="images/includes/project7.jpg" title="Gloss Template">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/includes/project7.jpg" alt="Gloss Template">
+                </div>
+            </div> <!-- /.item -->
+        </div> <!-- /#owl-demo -->
+    </section> <!-- /.portfolio-holder -->
+
+   
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/medigo-custom.min.js"></script>
+</body>
+</html>
 

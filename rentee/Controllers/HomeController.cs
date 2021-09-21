@@ -28,10 +28,23 @@ namespace rentee.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
+            var customersCount = _contex.Customers.ToList().Count();
+            ViewData["customers"] = customersCount;
+            var moviesCount = _contex.Movies.ToList().Count();
+            ViewData["movies"]= moviesCount;
+            var rentalsCount = _contex.Movies.ToList().Count();
+            ViewData["rentals"] = moviesCount;
+
             if (!Request.IsAuthenticated)
                 return View("WelcomeScreen");
-
-            return View("HomeScreen");
+            else
+            {
+                if (User.IsInRole(roleName.canManageMovies))
+                    return View("HomeScreen");
+                else
+                    return View("readOnlyIndex");
+            }
+            
         }
 
 
