@@ -21,11 +21,17 @@ namespace re.Controllers.API
             _context = new MyDBContext();
         }
 
-        public IHttpActionResult GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null)
         {
-            var dtos = _context.Customers
-                .Include(c => c.memberShiptype)
-                .ToList()
+            var customersQuery = _context.Customers
+                .Include(c => c.memberShiptype);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                customersQuery = customersQuery.
+                    Where(c => c.customerName.Contains(query));
+                
+                
+             var dtos = customersQuery.ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok(dtos);

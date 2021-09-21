@@ -13,7 +13,8 @@ namespace rentee
                         "~/Scripts/bootstrap.js",
                       "~/Scripts/bootbox.js",
                       "~/scripts/datatables/jquery.datatables.js",
-                      "~/scripts/datatables/datatables.bootstrap.js"
+                      "~/scripts/datatables/datatables.bootstrap.js",
+                      "~/scripts/typeahead.bundle.js"
                       ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -28,7 +29,8 @@ namespace rentee
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-mainTheme.css",
                       "~/Content/site.css",
-                      "~/content/datatables/css/datatables.bootstrap.css"
+                      "~/content/datatables/css/datatables.bootstrap.css",
+                      "~/content/typeahead.css"
                       ));
             
         }

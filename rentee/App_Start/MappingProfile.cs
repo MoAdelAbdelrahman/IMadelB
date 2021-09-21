@@ -13,6 +13,7 @@ namespace rentee.App_Start
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MembershipType, membershipTypeDto>();
             Mapper.CreateMap<Category, CategoryDto>();
+            
 
 
             // Dto to Domain

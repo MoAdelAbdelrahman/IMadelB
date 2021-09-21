@@ -36,6 +36,8 @@ namespace rentee.Models
         
         public int categoryId { get; set; }
 
+        public short availableCopies { get; set; }
+
 
     }
 }

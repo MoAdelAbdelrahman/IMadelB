@@ -9,7 +9,9 @@ namespace rentee.Models
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
         public DbSet<Category> Categories{ get; set; }
-        
+
+        public DbSet<Rental> rentals { get; set; }
+
 
         public MyDBContext()
             : base("DefaultConnection", throwIfV1Schema: false)
