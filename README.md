@@ -3,7 +3,7 @@
 
 An ASP.NET MVC 5 Usable & Maintainable web App.
  <p align="middle">
- <img src="https://user-images.githubusercontent.com/58152328/165084669-491602c2-57e1-4cf4-9071-8c98b159b2ff.PNG" width="820" height="500">
+ <img src="https://user-images.githubusercontent.com/58152328/165084669-491602c2-57e1-4cf4-9071-8c98b159b2ff.PNG" width="1020" height="600">
 </p>
 
 
