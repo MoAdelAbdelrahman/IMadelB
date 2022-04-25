@@ -2,7 +2,10 @@
 # IMadelB
 
 An ASP.NET MVC 5 Usable & Maintainable web App.
-https://user-images.githubusercontent.com/58152328/165084669-491602c2-57e1-4cf4-9071-8c98b159b2ff.PNG
+ <p align="middle">
+ <img src="https://user-images.githubusercontent.com/58152328/165084669-491602c2-57e1-4cf4-9071-8c98b159b2ff.PNG" width="350" height="300">
+</p>
+
 
 # Learning ASP MVC
 The idea of this project is to learn the best practices of entity framework and ASP MVC 5 instead of deploying features.
